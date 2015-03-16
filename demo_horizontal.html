@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='zh'>
+<head>
+	<meta charset="UTF-8">
+	<title>zepto.touchSlider horizontal</title>
+	<script type="text/javascript" src="lib/zepto.min.js"></script>
+	<script type="text/javascript" src="lib/zepto.fx.js"></script>
+	<style type="text/css">
+		html,body{
+		    padding: 0;
+		    margin: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+		.main{
+		    width: 100%;
+		    height: 100%;
+		    background: #fff;
+		    overflow: hidden;
+		    position: relative;
+		}
+		.page{
+		    width: 100%;
+		    height: 100%;
+		    background: #0f0;
+		    font-size: 5em;
+		    text-align: center;
+		}
+		p{
+			margin: 0;
+			font-size: 2em;
+		}
+		.page_1{
+		    background: #f00;
+		}
+		.page_2{
+		    background: #0f0;
+		}
+
+		.page_3{
+		    background: #00f;
+		}
+
+		.page_4{
+		    background: #ff0;
+		}
+
+		.page_5{
+		    background: #0ff;
+		}
+
+		.page_6{
+		    background: #f0f;
+		}
+	</style>
+	<script type="text/javascript" src="src/zepto.touchSlider.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.main').touchSlider({direction: 'h',itemSelector:'.page',slidePercent:0.2});
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+	    <div class="page page_1">page<p>1</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	    <div class="page page_2">page<p>2</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	    <div class="page page_3">page<p>3</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	    <div class="page page_4">page<p>4</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	    <div class="page page_5">page<p>5</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	    <div class="page page_6">page<p>6</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	</div>
+</body>
+</html>

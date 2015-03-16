@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang='zh'>
+<head>
+	<meta charset="UTF-8">
+	<title>zepto.touchSlider vertical</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src="lib/zepto.min.js"></script>
+	<script type="text/javascript" src="lib/zepto.fx.js"></script>
+	<style type="text/css">
+		html,body{
+		    padding: 0;
+		    margin: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+		.main{
+		    width: 100%;
+		    height: 100%;
+		    background: #fff;
+		    overflow: hidden;
+		    position: relative;
+		}
+		.page{
+		    width: 100%;
+		    height: 100%;
+		    background: #0f0;
+		    font-size: 1.5em;
+		    text-align: center;
+		    
+		}
+		p{
+			margin: 0;
+			font-size: 2em;
+		}
+		.page_1{
+		    background: #FCEC99;
+		}
+		.page_2{
+		    background: #99ECFC;
+		}
+
+		.page_3{
+		    background: #A1FC99;
+		}
+
+		.page_4{
+		    background: #FC99E8;
+		}
+
+		.page_5{
+		    background: #FCBD99;
+		}
+
+		.page_6{
+		    background: #BDFC99;
+		}
+
+		#clipBox_1, #clipBox_2, #clipBox_3{
+			width: 80%;
+			height: 45%;
+			margin: 20px auto;
+			border: 2px solid #000;
+		}
+	</style>
+	<script type="text/javascript" src="src/zepto.touchSlider.js"></script>
+	<script type="text/javascript" src="../clip-Box/zepto.clipBox.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.main').touchSlider({direction: 'v',itemSelector:'.page'});
+
+
+			var clipBox = $('#clipBox_1').clipBox();
+			$('.prev').on('click',function(e){
+				clipBox.prev();
+				return false;
+			});
+			$('.next').on('click',function(e){
+				clipBox.next();
+				return false;
+			});
+			$('#clipBox_2').clipBox();
+			$('#clipBox_3').clipBox();
+		});
+	</script>
+</head>
+<body>
+	<div class="main">
+	    <div class="page page_1">page<p>1</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a><br/>上下滑动换页</div>
+	    <div class="page page_2">
+			<div id="clipBox_1">
+				<img src="../clip-box/img/test0.png" height="730" width="560" alt="">
+				<img src="../clip-box/img/test1.png" height="560" width="730" alt="">
+				<img src="../clip-box/img/test2.png" height="560" width="730" alt="">
+				<img src="../clip-box/img/test3.png" height="730" width="560" alt="">
+			</div>
+			<a href="" class="prev">上一个</a>|<a href="" class="next">下一个</a>
+			<br/>page<p>2</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a>
+	    </div>
+	    <div class="page page_3">
+			<div id="clipBox_2">
+				<img src="../clip-box/img/test0.png" height="730" width="560" alt="">
+				<img src="../clip-box/img/test1.png" height="560" width="730" alt="">
+				<img src="../clip-box/img/test2.png" height="560" width="730" alt="">
+				<img src="../clip-box/img/test3.png" height="730" width="560" alt="">
+			</div>
+			page<p>3</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a>
+		</div>
+	    <div class="page page_4">
+			<div id="clipBox_3">
+				<img src="../clip-box/img/test0.png" height="730" width="560" alt="">
+				<img src="../clip-box/img/test1.png" height="560" width="730" alt="">
+				<img src="../clip-box/img/test2.png" height="560" width="730" alt="">
+				<img src="../clip-box/img/test3.png" height="730" width="560" alt="">
+			</div>
+			page<p>4</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a>
+		</div>
+	    <div class="page page_5">page<p>5</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	    <div class="page page_6">page<p>6</p><a href="http://www.codingserf.com" target="_blank">CodingSerf.com</a></div>
+	</div>
+</body>
+</html>
